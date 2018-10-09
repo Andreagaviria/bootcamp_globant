@@ -1,0 +1,431 @@
+
+
+
+
+/* Delete
+body .header {
+  float:right;
+
+}*/
+
+body .header nav{
+  font-size: 18.5px;
+  font-family:calibri;
+  color:#848484;
+  letter-spacing: -1px;
+  word-spacing: 30px;
+  /*margin-top:30px;*/
+  letter-spacing:0.3px;
+  font-weight: 5px;
+  float:right;
+  /*margin-right: 30px;*/
+  font-weight:550;
+  /* Add
+      display: inline-block;
+  */
+
+}
+
+body .header nav span{
+  word-spacing: 3px;
+
+}
+
+.header img{
+  /*Remove
+  margin-right: 55px;
+  float:right;
+  margin-top: 32px;
+  width:18px;*/
+  
+  /* Add
+  display: inline-block;
+ */
+}
+
+body .container{
+  /* Remove
+    position: absolute;
+    top:110px;
+    padding-left:110px;
+  */
+  background-color:#F2F2F2;
+  width: 100%;
+  height: 290px;
+  /* Add and see the changes in your browser
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  */
+
+}
+
+.container img{
+  /* Remove
+  padding-top:20px;
+  padding-right:50px;
+  */
+  /*
+    Add padding-right to each img like padding-right: 30px;
+  */
+}
+
+.subtitles h1{
+  font-family:calibri;
+  font-size: 12px;
+  font-weight: lighter;
+  position: absolute;
+  top:290px;
+  left:210px;
+  background-color: white;
+  width:130px;
+  height:35px;
+  padding:25px 0px;
+  text-align: center;
+  border:1px solid #BDBDBD;
+  color:#6E6E6E;
+}
+
+ .subtitles hr {
+  position: absolute;
+  top:335px;
+  width: 65px;
+  border: 1px solid black;
+  left:242px;
+
+}
+
+.subtitles div{
+  position: absolute;
+  top:345px;
+  width:65px;
+  border:1px solid black;
+  left:653px;
+}
+
+.subtitles h2+div{
+  position: absolute;
+  top:345px;
+  width:65px;
+  border:1px solid black;
+  left:1065px;
+  z-index: 1;
+}
+
+
+
+
+.subtitles h2{
+  font-family:calibri;
+  font-size: 12px;
+  font-weight: lighter;
+  position: absolute;
+  top:287px;
+  left:620px;
+  background-color: white;
+  width:130px;
+  height:35px;
+  padding:25px 0px;
+  text-align: center;
+  border:1px solid #BDBDBD;
+  color:#6E6E6E;
+}
+
+.subtitles h3{
+  font-family:calibri;
+  font-size: 12px;
+  font-weight: lighter;
+  position: absolute;
+  top:285px;
+  left:1030px;
+  background-color: white;
+  width:130px;
+  height:35px;
+  padding:25px 0px;
+  text-align: center;
+  border:1px solid #BDBDBD;
+  color:#6E6E6E;
+}
+
+ .container2 {
+   /*
+    Add size, Width, Heigth and float
+   */
+    width: 50%;
+    height: 700px;
+    background-color: #F5F5F5;
+ }
+ .container2 h1 {
+  font-family:helvetica;
+  font-size: 16px;
+  color:#848484;
+  background-color:#F5F5F5;
+  font-weight:lighter;
+  text-align: center;
+  padding-top: 30px;
+  /* Remove
+    position: absolute;
+    top:435px;
+    left:130px;
+    width:750px;
+    height:660px;
+    display:block;
+  */
+}
+
+.container2 img{
+  /*Remove
+  position: absolute;
+  top:515px;
+  left:245px; */
+  /*Add
+   float to left 
+  */
+
+}
+
+.container2 p{
+  text-align: left;
+  width:535px;
+  /*padding-left: 210px;
+  position:relative;
+  top:930px;
+  font-family:calibri;
+  font-size: 16px;
+  color:#848484;
+  font-weight: 550;*/
+}
+
+.asidebar {
+  /*
+    Add with and min-heigth and float-rigth
+  */
+}
+
+.asidebar h1{
+  font-size: 18px;
+  font-family: calibri;
+  color: #848484;
+  /*Remove
+  float: right;
+  margin-right: 125px;
+  margin-top: 270px;
+  */
+  /*Add
+   float to left and text-align center
+  */
+}
+
+.asidebar hr{
+  width: 105px;
+  border: 0.8px solid #BDBDBD;
+  /*Remove
+  position: absolute;
+  top: 493px;
+  right: 120px;
+  */
+}
+
+.asidebar h2+div{
+  /* Remove
+  position: absolute;
+  top: 910px;
+  right:105px;*/
+  width:115px;
+  border:0.8px solid #BDBDBD;
+  z-index:1;
+  
+}
+.asidebar img{
+  margin-right:-100px;
+  /*Remove
+    float:right;
+    margin-top:320px;
+  */
+  /* Add padding to center img
+  */
+}
+
+.asidebar p {
+  text-align: left;
+  font-family: calibri;
+  font-size: 12px;
+  color:#848484;
+  margin-top: 100px;
+  /*position: absolute;
+  right:-30px;
+  top: 650px;
+  width: 300px;*/
+}
+
+.asidebar p span{
+  display:block;
+}
+
+.asidebar h2{
+  font-size: 18px;
+  font-family: calibri;
+  color: #848484;
+  /* Remove
+    float: right;
+    margin-right: -120px;
+    margin-top: 680px;
+  */
+}
+
+.footer {
+  /*Add
+  Add size to footer like width: 100%,  loat: left and heigth;
+  */
+}
+
+.footer h1{
+  /*Remove
+  position: absolute;
+  padding-top: 90px;
+  top: 1180px;
+  height:110px;
+  bottom:0px;
+  */
+  text-align: center;
+  background-color:#535354;
+  color:white;
+  width: 100%;
+  bottom:0px;
+  padding-left:0px;
+  font-size: 20px;
+  font-family: calibri;
+  font-weight: lighter;
+ 
+
+}
+
+.footer span{
+  word-spacing: 25px;
+}
+
+.forms h1{
+  /*Remove
+    position: absolute;
+    top:661px;
+    right:-60px;
+  */
+  background-color: white;
+  border:1.3px solid #BDBDBD;
+  text-align: left;
+  width: 180px;
+  height:29px;
+  font-family: calibri;
+  font-size: 18px;
+  font-weight: 500;
+  color:#AEAEB0;
+  padding-top: 3.5px;
+  padding-left: 15px;
+  border-radius: 5px;
+
+}
+
+.forms h2{
+  /* Remove
+  position: absolute;
+  top:296px;
+  right:184px;
+  */
+  
+  background-color: white;
+  border:1.3px solid #BDBDBD;
+  text-align: left;
+  width: 180px;
+  height:100px;
+  font-family: calibri;
+  font-size: 19px;
+  font-weight: 500;
+  color:#AEAEB0;
+  padding-top:17px;
+  padding-left: 15px;
+  border-radius: 5px;
+}
+
+.forms h3{
+  /* Remove
+    position: absolute;
+    top:1088px;
+    right:63px;
+  */
+  
+  background-color:#535354;
+  text-align:center;
+  width: 199px;
+  height:36px;
+  font-family: calibri;
+  font-size: 19px;
+  font-weight: 500;
+  color:white;
+  padding-top:9px;
+  border-radius: 5px;
+}
+
+.botton div {
+  width: 75px; 
+  height: 150px; 
+  background: #535354;
+  -moz-border-radius: 0 100px 100px 0;
+  border-radius: 0 100px 100px 0;
+  position: absolute;
+  top:300px;
+  left:-10px;
+
+}
+
+.button div+h2 {
+  width: 75px; 
+  height: 150px; 
+  background: #535354;
+  -moz-border-radius: 100px 0 0 100px;
+  border-radius: 100px 0 0 100px;
+  position: absolute;
+  top:280px;
+  right:-10px;
+
+}
+
+
+/* @media screen and (min-width:320px) and (max-width:767px){
+
+  header{
+    display:flex;
+  }
+    
+ 
+  body .header nav{
+    font-size:16.5px;
+    position: absolute;
+    top:3%;
+    left:9%;
+    right:13%;
+    
+
+      }
+
+  body .header img{
+   position: absolute;
+   left:87%;
+
+  }
+
+  body .container{
+    padding-left:25%;
+
+  }
+
+  .container img{
+    display:block;
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+
+  
+
+
+
+} */

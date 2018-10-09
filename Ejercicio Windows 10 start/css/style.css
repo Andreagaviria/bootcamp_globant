@@ -1,0 +1,168 @@
+/*
+  Bg image: http://xinature.com/wp-content/uploads/2016/08/flowers-sunrise-purple-lavesnder-nature-lavender-sunset-lavendel-clouds-sky-field-flower-wallpaper-for-desktop-1920x1080.jpg
+  Cat image: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBxkKU5nAwXRBXkyQIUL4R_CN9hR1jpwmf4S7MUcTrw92-nWhb
+  Avatar: https://image.flaticon.com/icons/svg/146/146025.svg
+
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  
+  Colors:
+    orange: #e76022
+    blue: #00bcd4
+    red: #da312e
+    green: #61b812
+    yellow: #f1d445
+*/
+.content{
+  box-sizing:1000px;
+  width:1000px;
+  height:563px;
+}
+.paisaje{
+  width:1000px;
+  height:563px;
+  
+}
+h1{
+  font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  position:absolute;
+  top:30px;
+  left:60px;
+  color:white;
+  font-weight:200;
+  
+  }
+
+h2 {
+  font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  position:absolute;
+  top:30px;
+  left:700px;
+  color:white;
+  font-weight:200;
+  font-size:23px;
+}
+
+h3{
+ font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  position:absolute;
+  top:63px;
+  left:700px;
+  color:white;
+  font-weight:200;
+  font-size:13px; 
+}
+
+.avatar{
+  width:70px;
+  position:absolute;
+  top:35px;
+  left:850px;
+}
+
+.contenedor{
+  display:inline-block;
+  }
+
+.pq{
+  width:100px;
+  height:100px;
+}
+
+.gd {
+  width:203px;
+  height:100px;
+}
+
+#gato{
+  background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBxkKU5nAwXRBXkyQIUL4R_CN9hR1jpwmf4S7MUcTrw92-nWhb");
+  background-position:center;
+  
+}
+
+.cuadro{
+  display:inline-block;
+  margin-bottom:2px;
+}
+
+
+
+.amarillo1{
+  background-color:#f1d445;
+  position:absolute;
+  top:400px;
+  left:164px;
+}
+.amarillo{
+  background-color:#f1d445;
+  position:absolute;
+  top:400px;
+  left:670px;
+  
+}
+
+.naranja{
+  background-color:#e76022;
+  top:290px;
+  margin-left:260px;
+  position:absolute;
+  }
+
+.azul{
+  background-color:#00bcd4;
+  position:absolute;
+  top:290px;
+  left:670px;
+  
+ 
+}
+
+.azul1{
+  background-color:#00bcd4;
+  position:absolute;
+  margin-left:52px;
+  top:290px;
+  
+}
+.rojo{
+  background-color:#da312e;
+  position:absolute;
+  top:400px;
+  left:775px;
+  
+}
+
+.rojo1{
+  background-color:#da312e;
+  position:absolute;
+  top:400px;
+  left:268px;
+}
+
+
+
+
+.rojo2{
+  background-color:#da312e;
+  position:absolute;
+  top:290px;
+  left:475px;
+}
+.verde{
+  background-color:#61b812;
+  position:absolute;
+  left:775px;
+  top:290px;
+}
+
+.verde1{
+  background-color:#61b812;
+  position:absolute;
+  left:60px;
+  top:400px;
+}
+
+.blanco{
+  position:absolute;
+  top:400px;
+  left:372px;
+}
