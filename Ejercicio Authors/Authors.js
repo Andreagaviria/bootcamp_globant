@@ -10,37 +10,48 @@ let sisas = e.then(function (resultados) {
         const figCapt = document.createElement('figcaption');
         const img = document.createElement('img');
         const article = document.createElement('article');
-        img.src = author.picture.large;
-        figCapt.innerHTML = author.name.first + ' ' + author.name.last;
+
+        const imagenUrl = author.picture.large
+        const nombreAutor = author.name.first +
+            ' ' + author.name.last
+        img.src = imagenUrl;
+        figCapt.innerHTML = nombreAutor;
         article.append(figCapt);
         article.append(img);
+
+        // Creo un id para cada article que sea el email
+        article.setAttribute('id', author.email);
+
         miSection.append(article);
-        article.setAttribute('id', author.email)
-        
-        article.addEventListener('click', (e)=> {
+
+        article.addEventListener('click', () => {
+            crearFavorito(author.email, nombreAutor, imagenUrl)
             removerElemento(author.email)
         })
+    });
+});
 
-    });      
+// En esta funcion creo un article dentro del elemento aside
+crearFavorito = (email, nombreAutor, imagenUrl) => {
+    const aside = document.querySelector('aside');
+    const article = document.createElement('article');
+    const figCapt = document.createElement('figcaption');
+    const img = document.createElement('img');
+
+    img.src = imagenUrl;
+    figCapt.innerHTML = nombreAutor;
+    article.append(figCapt);
+    article.append(img);
     
-}); 
+    aside.append(article);
+}
 
-        const aside = document.querySelector(‘aside’);
-        var article = document.getElementById(email);
-        aside.append(article);
-            }
-    
-    const favorites =[node];
-     favorites.push (); 
+// Elimino el article de la lista
+removerElemento = (email) => {
+    var article = document.getElementById(email);
+    article.remove()
+}
 
 
-    
-    //console.log("le di click", e);
-            // Aqui hacen la logica
-            // para desaparecerlo de la lista estandar 
-            // y llevarlo a la lista de favoritos
-            // Hints: var favoritos = [];
-            //favoritos.push()
-        
     
 
