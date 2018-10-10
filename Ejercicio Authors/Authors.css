@@ -1,13 +1,47 @@
+body{
+	background-image:linear-gradient(rgb(178, 216, 210));
+}
+
+.container{
+	position: relative;
+	text-align: center;
+	margin-top:30px;
+}
+
+.container img{
+	transform:rotate(90deg);
+	display:block;
+    margin-left: auto;
+    margin-right: auto;
+	width:25%;
+	
+}
+
+h1{
+	position: absolute;
+	color:rgb(19, 24, 26);
+	font-family: helvetica;
+	font-size:35px;
+	text-transform: uppercase;
+	font-weight: lighter;
+	top: 50%;
+    left: 50%;
+	transform: translate(-50%, -50%);
+	background-color:lightgray;
+	padding:30px;
+	
+}
 .main {
 	display: flex;
-	flex-direction: row;
-	
+	flex-direction:row;
 	margin-top:200px;
 	margin-left:50px;
+	
 	
 }
 
 section{
+	f
 	/*lista normal*/
 }
 
@@ -16,10 +50,18 @@ aside{
 }
 
 figCaption{
+	font-family:helvetica;
+	font-weight:lighter;
+	font-size:20px;
+	color:#232525;
+
+
+
 	/*nombres*/
 }
 
 img{
+	width:200px;
 	/*fotos*/
 }
 
