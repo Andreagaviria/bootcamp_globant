@@ -28,6 +28,8 @@ body{
 	width:80%;
 	position: relative;
 	top:20px;
+	-webkit-filter:none;
+   filter:none;
 	
 }
 
@@ -40,14 +42,17 @@ body{
     left: 38%;
 	
 }
+@font-face{
+	font-family: kiona-Regular;
+	src:url("../Ejercicio Authors/Kiona-Regular.ttf");
+}
 
 h1{
 	position: absolute;
 	color:rgb(56, 71, 71);
-	font-family: helvetica;
+	font-family:kiona-Regular;
 	font-size:25px;
 	text-transform: uppercase;
-	font-weight: normal;
 	top: 50%;
     left: 50%;
 	transform: translate(-50%, -50%);
@@ -68,13 +73,12 @@ h1{
 
 section h3{
 	position: relative;
-	font-family: helvetica;
+	font-family:kiona-Regular;
 	color:rgb(56, 71, 71);
 	font-size:18px;
 	position: relative;
 	padding:10px;
 	left:80px;
-	font-weight:lighter;
 	text-transform: uppercase;
 
 }
@@ -94,10 +98,9 @@ aside{ /*lista de favoritos*/
 }
 
 aside h3{
-	font-family: helvetica;
+	font-family:kiona-Regular;
 	color:rgb(56, 71, 71);
 	font-size:18px;
-	font-weight:lighter;
 	text-transform: uppercase;
 	position: relative;
 	padding:10px;
@@ -120,13 +123,16 @@ figCaption{ /*nombres*/
     width:250px;
 	padding-top:10px;
 	padding-bottom:30px;
+	-webkit-filter: grayscale(1);
+   filter: grayscale(1);
 	
 }
 	
 
 
- img:hover{
-	-webkit-filter: grayscale(1);
-   filter: grayscale(1);
+img:hover{
+	-webkit-filter:none;
+	filter:none;
+	
 }
 
