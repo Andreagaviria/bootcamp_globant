@@ -1,9 +1,19 @@
 body{
-	background-color:rgb(238, 238, 238);
-	
-
-
+	background:url(floral\ background.png);
+	width:100vp;
+	margin:0px;
+	padding:0px;
+		
 }
+
+ .column{
+	 background-color:white;
+	 width:50%;
+	 display:block;	
+     margin-left: auto;
+     margin-right: auto;
+	 height: 100%;
+ }
 
 .container{
 	position: relative;
@@ -11,11 +21,11 @@ body{
 	margin-top:0px;
 }
 
-.container img{
+.banner{
 	display:block;	
     margin-left: auto;
     margin-right: auto;
-	width:40%;
+	width:80%;
 	position: relative;
 	top:20px;
 	
@@ -26,9 +36,8 @@ body{
 	width:170px;
 	border:0.5px solid rgb(36, 37, 37);
 	position: absolute;
-	top: 62%;
-    left: 43.5%;
-	
+	top: 55%;
+    left: 38%;
 	
 }
 
@@ -43,7 +52,9 @@ h1{
     left: 50%;
 	transform: translate(-50%, -50%);
 	background-color:rgb(255, 255, 255);
-	padding:5%;
+	padding:7%;
+	margin-top:0px;
+	margin-bottom:0px;
 	
 }
 
@@ -53,10 +64,6 @@ h1{
 .main {
 	position: relative;
 	display: flex;
-
-	
-	
-	
 }
 
 section h3{
@@ -70,12 +77,11 @@ section h3{
 	font-weight:lighter;
 	text-transform: uppercase;
 
-
 }
 
 section{ /*lista normal*/
 	position: relative;
-	left:30%;
+	left:10%;
 	top:60px;
 		
 }
@@ -83,7 +89,7 @@ section{ /*lista normal*/
 aside{ /*lista de favoritos*/
 	position: relative;
 	top:60px;
-	left:32.5%;
+	left:15%;
 	
 }
 
@@ -110,7 +116,7 @@ figCaption{ /*nombres*/
 
 
 
-img{ /*fotos*/
+ img{ /*fotos*/
     width:250px;
 	padding-top:10px;
 	padding-bottom:30px;
@@ -119,7 +125,8 @@ img{ /*fotos*/
 	
 
 
-img:hover{
-	
+ img:hover{
+	-webkit-filter: grayscale(1);
+   filter: grayscale(1);
 }
 
