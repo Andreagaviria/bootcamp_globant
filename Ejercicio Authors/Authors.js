@@ -7,13 +7,12 @@ let sisas = e.then(function (resultados) {
     const authors = here.results;
     const miSection = document.querySelector('section');
     authors.forEach((author) => {
-        const figCapt = document.createElement('figcaption');
         const img = document.createElement('img');
+        const figCapt = document.createElement('figcaption');
         const article = document.createElement('article');
 
         const imagenUrl = author.picture.large
-        const nombreAutor = author.name.first +
-            ' ' + author.name.last
+        const nombreAutor = author.name.first + ' ' + author.name.last;
         img.src = imagenUrl;
         figCapt.innerHTML = nombreAutor;
         article.append(figCapt);
@@ -35,8 +34,9 @@ let sisas = e.then(function (resultados) {
 crearFavorito = (email, nombreAutor, imagenUrl) => {
     const aside = document.querySelector('aside');
     const article = document.createElement('article');
-    const figCapt = document.createElement('figcaption');
     const img = document.createElement('img');
+    const figCapt = document.createElement('figcaption');
+    
 
     img.src = imagenUrl;
     figCapt.innerHTML = nombreAutor;
