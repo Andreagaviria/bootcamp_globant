@@ -10,7 +10,6 @@ let sisas = e.then(function (resultados) {
         const img = document.createElement('img');
         const figCapt = document.createElement('figcaption');
         const article = document.createElement('article');
-
         const imagenUrl = author.picture.large
         const nombreAutor = author.name.first + ' ' + author.name.last;
         img.src = imagenUrl;
@@ -42,7 +41,6 @@ crearFavorito = (email, nombreAutor, imagenUrl) => {
     figCapt.innerHTML = nombreAutor;
     article.append(figCapt);
     article.append(img);
-    
     aside.append(article);
 }
 
