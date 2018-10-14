@@ -20,12 +20,12 @@
 .phones {
   position: relative;
 }
-.phone {
+.phone1 {
   position: relative;
   max-width: 80%;
   margin: 3rem auto -12rem;
 }
-.phone + .phone {
+.phone1 + .phone2 {
   display: none;
 }
 
@@ -73,6 +73,14 @@
      padding-top:200px;
      padding-bottom:190px;
 
+  }
+  .phone1 + .phone2{
+    display:block;
+  }
+  .phone2{
+    margin:-47rem 11rem -12rem;
+    width:271px;
+    
   }
   
 }

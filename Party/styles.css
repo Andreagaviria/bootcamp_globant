@@ -1,0 +1,28 @@
+
+.main{
+    background:url(../fiesta/Sample.png);
+    height:100vh;
+
+
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+    align-items: center;
+
+}
+
+.container div{
+    background-color:rgba(107, 191, 191, 0.7);;
+    margin: 10px;
+    padding: 7px 14px;
+    font-family: verdana;
+
+}
+
+.play {
+    box-shadow:2px 2px 15px 7px rgb(30, 175, 36);
+}

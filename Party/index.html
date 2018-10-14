@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Esta es mi fiesta</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
+</head>
+<body>
+    <div class="main">
+    <div class="container">
+        <div id="teclita65">A</div>
+        <div id="teclita83">S</div>
+        <div id="teclita68">D</div>
+        <div id="teclita70">F</div>
+        <div id="teclita71">G</div>
+        <div id="teclita72">H</div>
+        <div id="teclita74">J</div>
+        <div id="teclita75">K</div>
+        <div id="teclita76">L</div>
+
+    </div>
+    <audio id="audiecito65" src="./sounds/fizzle.wav"> </audio>
+    <audio id="audiecito83" src="./sounds/hat.wav"> </audio>
+    <audio id="audiecito68" src="./sounds/kick.wav"> </audio>
+    <audio id="audiecito70" src="./sounds/snare.wav"> </audio>
+    <audio id="audiecito71" src="./sounds/snarezz.wav"> </audio>
+    <audio id="audiecito72" src="./sounds/synth.wav"> </audio>
+    <audio id="audiecito74" src="./sounds/vox1.wav"> </audio>
+    <audio id="audiecito75" src="./sounds/vox2.wav"> </audio>
+    <audio id="audiecito76" src="./sounds/vox3.wav"> </audio>
+</div>
+    <script>
+        
+        function reproducirSonido(e) {
+            var audio = document.querySelector('#audiecito' + e.keyCode);
+            var caja = document.querySelector("#teclita" + e.keyCode)
+            if (audio) {
+                caja.classList.add('play');
+                audio.currentTime = 0;
+                audio.play();
+
+                setTimeout( function(){
+                    caja.classList.remove("play"); 
+                }, 300);
+            }
+        }
+
+        document.addEventListener('keydown', reproducirSonido);
+        
+    </script>
+</body>
+</html>
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+/*Basic page reset styles*/
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/*
+  this is the font family that you need to use: font-family: 'Press Start 2P', cursive;
+*/
+
+
+.init-game{
+  font-family: 'Press Start 2P', cursive;
+  background-image:url(images/mario_bross.jpg);
+  width:100%;
+  background-size:auto 100%;
+  background-repeat: no-repeat;
+  background-color:#6B88FE;
+  background-position: center;
+  display:flex;
+  justify-content: center;
+  justify-content: space-around;
+  color:white;
+  padding-top:25px;
+  font-size: 6px;
+  height:100vh;
+
+}
+.mario{
+  display:flex;
+  flex-direction: column;
+  
+  
+  
+
+
+
+
+  
+}
+
+.coins h1{
+  display: inline-block;
+  
+
+}
+
+.world{
+  display:flex;
+  flex-direction: column;
+  
+
+}
+
+.time{
+  display: flex;
+  flex-direction: column;
+
+}
+
+.mariosm{
+  position:absolute;
+  bottom:6%;
+  left:456px;
+  transition: bottom 1s;
+}
+
+
+.mariosm:hover{
+  bottom:20%;
+
+}
+.coin{
+  position: absolute;
+  left:467px;
+  bottom:250px;
+  visibility: hidden;
+  transition: 1s visibility, 1s bottom;
+}
+
+.mariosm:hover ~ .coin{
+  bottom: 350px;
+  visibility:visible;
+}
