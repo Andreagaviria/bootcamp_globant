@@ -1,5 +1,5 @@
 
-  *{
+  * {
     margin:10px;
     padding: 0px 0px;
     margin-left:0px;
@@ -7,20 +7,16 @@
     margin-bottom:0px;
   }
 
-  body{
+  body {
   height:100vh;
   }
-    
-    
-  
-  header{
+      
+  header {
       width:100%;
       height:100px;
-      
-      
   }
   
-  header nav ul li {
+  nav ul li {
       display: inline;
       margin-right:40px;
       font-size: 20px;
@@ -31,33 +27,33 @@
       left:750px;
   }
   
-  header img{
+  .lupa {
       position: relative;
-      left:1280px;
       top:35px;
-  
   }
   
-  .container{
+  .container {
     background-color: #F2F2F2;
     width: 100%;
     display: flex;
     position: relative;
-    height: 350px;
-    
+    min-height: 350px;
+    display: flex;
+    justify-content: space-around;
   }
-  
-  .container img:nth-child(1){
-    margin-left:150px;
+
+  .container .wrapper {
+    max-width: 1500px;
+    display: flex;
+    justify-content: space-between;
   }
-  
-  .container img{
-    flex-direction:row;
-    margin-top: 20px;
-    padding-right:50px; 
+
+  .contain {
+    position: relative;
+    margin: 0 20px;
   }
-  
-  .container h3{
+
+  .contain .fav-text {
     position: absolute;
     font-size: 12px;
     font-family: calibri;
@@ -65,42 +61,40 @@
     background-color: white;
     border:0.5px solid #BEC1C2;
     bottom:60px;
-    padding: 30px 30px  45px;;
-  
-    
+    padding: 30px 30px  45px;
+    left: calc(50% - 64px);
   }
   
-  .container h3:nth-child(2){
-     left:243px;
-  }
-  
-  .container h3:nth-child(4){
+  .container .fav-text:nth-child(4) {
     left:667px;
   }
   
-  .container h3:nth-child(6){
+  .container .fav-text:nth-child(6) {
     left:1055px;
   }
   
-  .main .articles{
+  .main {
+    width: 70%;
+    float: left;
+    display: flex;
+    justify-content: center
+  }
+
+  .main .articles {
     display: relative;
     background-color: #F6F6F7;
-    width:660px;
-    height: 650px;
-    padding: 30px 50px;
+    max-width:660px;
+    padding: 50px 50px;
     text-align: center;
-    margin-left:150px;
-    margin-top:46px;
-    
   }
-  
-  .main h2{
+
+  .main h2 {
     font-size:17px;
     color:#7E868E;
     font-family: calibri;
   }
   
-  .main p{
+  .main p {
     text-align: left;
     width:518px;
     padding-left:50px;
@@ -109,27 +103,29 @@
     font-weight: bold;
   }
   
-  aside{
+  aside {
     position: relative;
-  
     text-align: center;
-    left:1000px;
-    top:-720px;
-    width:314px;
-    
-  
-  
+    width: 30%;
+    float: left;
   }
-  aside h2{
+
+  .author {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  aside h2 {
     padding-top:20px;
     font-family: calibri;
     font-size:19px;
     color:#7E868E;
     padding-top:30px;
-  
   }
   
-  aside p{
+  aside p {
     padding-top:20px;
     text-align:left;
     font-family:calibri;
@@ -139,94 +135,171 @@
     padding-left:50px;
   }
   
-  aside .contact{
+  .contact{
     padding-top:20px;
   }
-  
-  .forms h3{ 
+
+  aside img {
+    max-width: 300px;
+  }
+
+  .forms {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .forms h3 { 
     font-size:20px;
     font-family: calibri;
     color:#C5CCD6;
     font-weight: lighter;
     padding-top:10px;
-    margin-left:70px;
   }
   
-  .forms h3:nth-child(1){
+  .forms h3 {
     border:0.5px solid #95A1B3;
+    width:140px;
     border-radius:7px;
+  }
+
+  .forms h3:nth-child(1) {
     padding:2px 1px;
     text-align: left;
     padding:5px  20px;;
-    width:140px; 
     margin-bottom: 10px;
-  
-        
   }
-  .forms h3:nth-child(2){
-   
-    border:0.5px solid #95A1B3;
+
+  .forms h3:nth-child(2) {
     padding:15px  20px;;
-    width:140px; 
     height:80px;
-    border-radius:7px;
     text-align: left;
     margin-bottom: 10px;
-        
   }
-  
-  .forms h3:nth-child(3){
+
+  .forms h3:nth-child(3) {
     background-color:#47525E;
     color:#CACCD0;
     width:60px;
-    border-radius:7px;
     padding:10px 60px;
-        
   }
   
-  footer{
+  footer {
     background-color:#47525E;
     widows: 100%;
     height:150px;
     text-align: center;
-    position: relative;
-    top:-669px;
     padding:auto;
     color:#CACCD0;
     font-family: calibri;
     font-size:20px;
-    padding-top:90px;;
+    padding-top:90px;
+    clear: both;
   }
   
   
    @media screen and (min-width:320px) and (max-width:767px){
-  
-    
 
-    header{
-    display:flex;
-    }
-      
-   
-    header nav ul li{
-    justify-content: center;  
-    font-size: 15px;
-    font-family: calibri;
-    font-weight: bold;
-    color: grey;
-       
-      
-    }
-
-    .conatiner{
+    header nav {
       display: flex;
+      justify-content: center;
     }
-  
-    .container img{
+
+    header nav ul li {
+      left: 0;
+      font-size: 15px;
+    }
+
+    .container {
+      display: flex;
       flex-direction:column;
-      margin-top: 20px;
-      padding-right:50px; 
+      margin-top: 20px; 
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 64px;
     }
     
-  } 
+    .container .wrapper {
+      min-width: 320px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .contain {
+      position: relative;
+      margin: 0 10px;
+    }
+
+    .contain .fav-image {
+      max-width: 300px;
+      padding: 30px 10px 0px 10px;
+    }
+
+    .contain .fav-text {
+      position: absolute;
+      bottom: -30px;
+      left: calc(50% - 64px);
+    }
+
+    .main .articles {
+      margin: 0;
+      padding-bottom: 64px;
+    }
+
+    .articles h2 {
+      padding-top: 30px;
+    }
+
+    .main {
+        width: 100%;
+        float: none;
+        display: block;
+    }
+
+    .main p {
+      padding: 0;
+      margin: 0;
+      display: block;
+    }
+
+    .articles article {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    aside {
+      position: initial;
+      width: 100%;
+      padding-bottom: 50px;
+    }
+
+    aside p {
+      padding: 0;
+    }
+
+    .author {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .contact {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .forms h3 {
+      margin-left: 0px;
+    }
+
+    footer {
+      position: initial;
+    }
+
+  }
 
