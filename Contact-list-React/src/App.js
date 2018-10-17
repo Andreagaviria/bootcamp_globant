@@ -31,23 +31,26 @@ class App extends Component {
 const Navigation = (props)=>{
   return (
           <nav>
-            <ul>
-              <li>
-                <Link to={`/Home`}>Home</Link>    
-              </li>
-              <li>
-               <Link to={`/About`}>About</Link>
-              </li>
-              <li>
-               <Link to={`/services`}>Services</Link>
-              </li>  
-              <li>
-               <Link to={`/contactlist`}>Contact List</Link>
-              </li> 
-            </ul>
+            <p>
+              <ul>
+                <li>
+                  <Link class="nav" to={`/Home`}>Home</Link>    
+                </li>
+                <li>
+                <Link class="nav" to={`/About`}>About</Link>
+                </li>
+                <li>
+                <Link class="nav" to={`/services`}>Services</Link>
+                </li>  
+                <li>
+                <Link class="nav" to={`/contactlist`}>Contact List</Link>
+                </li> 
+              </ul>
+            </p>
           </nav>
   )
 }
+
 const Home = (props) => {
   return(
     <div>
@@ -56,6 +59,7 @@ const Home = (props) => {
   )
 
 }
+
 class ContactListSection extends Component {
   constructor(props){
     super(props);
@@ -89,14 +93,14 @@ console.log("Añadir a favoritos", contact);
   }
 
   
-
   render(){
     console.log(this.state);
     return (
       <div id="section">
-      <ContactList className="App" all=
-      {this.state.all} title="Todos"
-      addToFavorites={this.addToFavorites}/>
+        <ContactList className="App" all=
+        {this.state.all} title="Todos"
+        addToFavorites={this.addToFavorites}/>
+
         <ContactList className="favorites" all=
         {this.state.favorites} title="Favoritos"  key ="2" addToFavorites ={this.addToFavorites}/>
       </div>
@@ -107,7 +111,7 @@ console.log("Añadir a favoritos", contact);
 const ContactList =props =>{
   return(
     <div className={props.className}>
-    <h2>{props.title}</h2>
+      <h2>{props.title}</h2>
     {
       props.all.map(
         contact => (
@@ -115,9 +119,7 @@ const ContactList =props =>{
         )
       )
     }
-
     </div>
-
   );
   }
 
