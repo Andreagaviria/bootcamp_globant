@@ -31,22 +31,14 @@ class App extends Component {
 const Navigation = (props)=>{
   return (
           <nav>
-            <p>
-              <ul>
-                <li>
-                  <Link class="nav" to={`/Home`}>Home</Link>    
-                </li>
-                <li>
-                <Link class="nav" to={`/About`}>About</Link>
-                </li>
-                <li>
-                <Link class="nav" to={`/services`}>Services</Link>
-                </li>  
-                <li>
-                <Link class="nav" to={`/contactlist`}>Contact List</Link>
-                </li> 
-              </ul>
-            </p>
+            <ul>
+              <li>
+                <Link className="nav" to={`/`}>Home</Link>    
+              </li>
+              <li>
+              <Link className="nav" to={`/contactlist`}>Contact List</Link>
+              </li> 
+            </ul>
           </nav>
   )
 }
@@ -54,7 +46,7 @@ const Navigation = (props)=>{
 const Home = (props) => {
   return(
     <div>
-      Andrea
+     Andrea
     </div>
   )
 
@@ -76,30 +68,41 @@ class ContactListSection extends Component {
    
   }
    
-   addToFavorites(contact){
-     console.log("Añadir a favoritos", contact);
-     const newAll = this.state.all.filter ( c => c.id.value !== contact.id.value);
-     const newFavorites = this.state.favorites.concat(contact);
-     this.setState({
-       all:newAll,
-       favorites: newFavorites
-     });
+   addToFavorites(contact,type){
+    console.log('estoy en la lista', type)
 
-    console.log("index", newAll);
-  //necesito añadir caracteristicas.
+    if(type === 'Todos') {
+      const newAll = this.state.all.filter ( c => c.id.value !== contact.id.value);
+      const newFavorites = this.state.favorites.concat(contact);
+      this.setState({
+        all:newAll,
+        favorites: newFavorites
+      }); 
+    }
+    else {
+      const favorites = this.state.favorites.filter ( c => c.id.value !== contact.id.value);
+      const newAll = this.state.all.concat(contact);
+      this.setState({
+        all:newAll,
+        favorites: favorites
+      }); 
+    }
+
+
+
    }
 
 
    removeFromFavorites(contact){
      console.log("Eliminar de favoritos", contact);
-     const newAll = this.state.favorites.filter ( c => c.id.value !== contact.id.value);
-     const newFavorites = this.state.all.concat(contact);
+     const newAll = this.state.all.filter ( c => c.id.value !== contact.id.value);
+     const favorites = this.state.favorites.filter ( c => c.id.value !== contact.id.value);
+
      this.setState({
-       all:newFavorites,
-       favorites: newAll
+       all: newAll,
+       favorites: favorites
     });
 
-    console.log("index", newFavorites);
    }
 
 
@@ -122,25 +125,37 @@ class ContactListSection extends Component {
       <div id="section">
         <ContactList className="App" all=
         {this.state.all} title="Todos"
-        addToFavorites={this.addToFavorites}/>
+        addToFavorites={this.addToFavorites} 
+        removeFromFavorites={this.removeFromFavorites}/>
 
         <ContactList className="favorites" all=
-        {this.state.favorites} title="Favoritos"  key ="2" addToFavorites ={this.addToFavorites}/>
+        {this.state.favorites} title="Favoritos"  key ="2" 
+        addToFavorites ={this.addToFavorites} 
+        removeFromFavorites={this.removeFromFavorites}/>
       </div>
     );
   }
 }
 
 const ContactList =props =>{
+  console.log(props)
   return(
     <div className={props.className}>
       <h2>{props.title}</h2>
     {
       props.all.map(
         contact => (
-          <ContactCard key={contact.name.first} contact = {contact} addToFavorites={props.addToFavorites}/>
+          <ContactCard 
+            key={contact.name.first} 
+            contact = {contact} 
+            addToFavorites={props.addToFavorites} 
+            removeFromFavorites={props.removeFromFavorites}
+            type={props.title}
+          />
         )
       )
+
+      
     }
     </div>
   );
@@ -158,17 +173,17 @@ class ContactCard extends Component {
   }
 
   onClickFavorites(){
-    this.props.addToFavorites(this.props.contact);
+    this.props.addToFavorites(this.props.contact, this.props.type);
   }
 
-
+  
     
   onClickAll(){
-    this.props.removeFromFavorites(this.props.contact);
-
+    this.props.removeFromFavorites(this.props.contact)
   }
 
   render(){
+    const nombreBoton = this.props.type === 'Todos' ? 'Favoritos': 'Devolver'
     return(
        <div className="contact-card">
         <figure>
@@ -180,7 +195,7 @@ class ContactCard extends Component {
             {this.props.contact.name.last}
           </figcaption>
         </figure>
-        <button onClick={this.onClickFavorites}>Favorito</button>
+        <button onClick={this.onClickFavorites}>{nombreBoton}</button>
         <button onClick={this.onClickAll}>Eliminar</button>
       </div>
     );
