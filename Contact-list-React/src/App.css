@@ -1,7 +1,9 @@
 body {
   margin:0px;
   padding:0px;
-  background-color: rgb(234, 238, 240);
+  background-image:url(../src/imagenes/8825.png);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 
 #section {
@@ -17,8 +19,12 @@ body {
   color:rgb(52, 68, 78);
   margin-bottom: 7px;
   text-transform:uppercase;
-  font-weight: 400;
-  text-align: center;
+  font-weight:400;
+  text-align:center;
+  background-color:white;
+  border-radius: 20px;
+  padding:3px;
+  border:5px solid #EFF78F;
 }
 
 
@@ -37,7 +43,7 @@ body {
   background-color: rgb(12, 84, 105);
   color: white;
   font-size:13px;
-  border:6px double rgb(255, 255, 255);
+  border:5px double rgb(12, 84, 105);
   padding:7px 7px;
   margin-left:5px;
   margin-right: 25px;
@@ -46,7 +52,7 @@ body {
 }
 
 .contact-card button:hover {
-  border:2px solid white;
+  border:5px double rgb(255, 255, 255);
 }
 
 .contact-card img {
@@ -83,14 +89,15 @@ ul {
 }
 
 .nav {
-  color:rgb(188, 194, 196);
+  color:white;
   text-decoration:none; 
   font-weight:400;
 }
 
 .nav:hover {
-  color:rgb(49, 164, 199);
-  text-decoration:underline;
+  color:#EFF78F;
+
+  
  
 }
 

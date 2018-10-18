@@ -72,15 +72,38 @@ class ContactListSection extends Component {
   
   
    this.addToFavorites = this.addToFavorites.bind(this);
+   this.removeFromFavorites = this.removeFromFavorites.bind(this);
+   
   }
    
    addToFavorites(contact){
-     const newAll = this.state.all.filter ( c => c.login.uuid !== contact.login.uuid);
-     const newfavorites = this.state.favorites.concat(contact);
+     console.log("Añadir a favoritos", contact);
+     const newAll = this.state.all.filter ( c => c.id.value !== contact.id.value);
+     const newFavorites = this.state.favorites.concat(contact);
+     this.setState({
+       all:newAll,
+       favorites: newFavorites
+     });
 
-console.log("Añadir a favoritos", contact);
+    console.log("index", newAll);
   //necesito añadir caracteristicas.
    }
+
+
+   removeFromFavorites(contact){
+     console.log("Eliminar de favoritos", contact);
+     const newAll = this.state.favorites.filter ( c => c.id.value !== contact.id.value);
+     const newFavorites = this.state.all.concat(contact);
+     this.setState({
+       all:newFavorites,
+       favorites: newAll
+    });
+
+    console.log("index", newFavorites);
+   }
+
+
+
 
   componentDidMount() {
     fetch('https://randomuser.me/api/?results=10')
@@ -130,6 +153,7 @@ class ContactCard extends Component {
     super(props);
 
     this.onClickFavorites = this.onClickFavorites.bind(this);
+    this.onClickAll = this.onClickAll.bind(this);
 
   }
 
@@ -137,6 +161,12 @@ class ContactCard extends Component {
     this.props.addToFavorites(this.props.contact);
   }
 
+
+    
+  onClickAll(){
+    this.props.removeFromFavorites(this.props.contact);
+
+  }
 
   render(){
     return(
@@ -151,7 +181,7 @@ class ContactCard extends Component {
           </figcaption>
         </figure>
         <button onClick={this.onClickFavorites}>Favorito</button>
-        <button>Eliminar</button>
+        <button onClick={this.onClickAll}>Eliminar</button>
       </div>
     );
   }
