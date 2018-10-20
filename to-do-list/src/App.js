@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import './App.css';
-import img from "src/imagenes";
+
 
 
 
@@ -43,15 +43,18 @@ class App extends Component {
         return(
           <body>
             <div>
-            <img src={"src/imagenes/89-01.png"}/>
+            <img className ="flore" src={require('./imagenes/flor-01.png')}/>
+            <img className ="flora" src={require('./imagenes/flor-02.png')}/>
+           
                 <h1>To do list</h1>
+                <p>"Even the smallest steps moves you forward."<br/><span>Oprah Winfrey</span></p>
                 <input 
                     type="text"
                     placeholder="Escribe aquí"
                     value={this.state.tarea}
                     onChange={this.handleChange}
                 />
-                <button  type="submit" onClick={this.crearTarea}>Done</button>
+                <button  type="submit" onClick={this.crearTarea}>Create</button>
                 <ul>
                     {
                         this.state.tareas.map(tarea => (
@@ -59,7 +62,7 @@ class App extends Component {
                                 {tarea}
                                 <button 
                                     type="submit"
-                                    onClick={() => this.eliminarTarea(tarea)}>Dont need this anymore</button>  
+                                    onClick={() => this.eliminarTarea(tarea)}>Done</button>  
                             </li>
                         ))
                     }
